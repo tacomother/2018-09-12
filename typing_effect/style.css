@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: #c11b17;
+}
+
+.container {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+
+#text {
+  color: white;
+  font-family: "Righteous", cursive;
+  font-size: 4.8rem;
+  text-shadow: 5px 10px black;
+}
+
+#text::after {
+  position: relative;
+  content: "O";
+  color: transparent;
+  background-color: white;
+  text-shadow: 0 0;
+  animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+  0%,
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
